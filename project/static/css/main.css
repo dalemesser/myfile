@@ -1,0 +1,24 @@
+body{
+background-color : #e6ffff ;
+}
+footer{
+color:red;}
+
+#total-orders{
+background-color:#ccffff
+}
+
+#total-pending{
+margin: 5px;
+background-color:#80bfff
+}
+#total-dilivered{
+background-color:#80aaff
+}
+button{
+margin:5px;
+}
+
+.col{
+width :100%;
+float : left;}
