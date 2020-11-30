@@ -1,0 +1,12 @@
+{% extends "project/base.html" %}
+
+{% block title %} Order Form {% endblock %}
+
+{% block body %}
+<form method="post" action="{% url 'createorder'%}">
+    {% csrf_token %}
+    {{ form }}
+
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
