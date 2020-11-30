@@ -1,0 +1,24 @@
+{% extends "project/base.html" %}
+
+{% block title %} Customerform {% endblock %}
+
+{% block body %}
+<div class="row">
+    <div style="margin-left:430px;margin-top:20px;" class="col-md-3">
+        <div  class="card card-body">
+        <form method="post" >
+            {% csrf_token %}
+            {{ form.name.label }}{{ form.name }}
+            <hr>
+            {{ form.phone.label }}{{ form.phone }}
+            <hr>
+            {{ form.email.label }}
+            {{ form.email }}
+            <hr>
+            <input style="margin-left:70px" class="btn btn-primary" type="submit" value="Submit">
+        </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "project/base.html" %}
+
+{% block title %} dashboard {% endblock %}
+
+{% block body %}
+{% include 'project/status.html' %}
+<div class="row">
+        <div class="col-12">
+            <div class="card card-body">
+                <table class="table table-md">
+                    <tr>
+                        <th>Product</th>
+                        <th>Note</th>
+                        <th>Date Ordered</th>
+                        <th>Status</th>
+                    </tr>
+                    {% for order in orders %}
+                      <tr>
+                        <th>{{order.product}}</th>
+                        <th>{{order.note}}</th>
+                        <th>{{order.date_created}}</th>
+                        <th>{{order.status}}</th>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
