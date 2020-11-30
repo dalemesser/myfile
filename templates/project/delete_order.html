@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete order</title>
+</head>
+<body>
+{% extends "project/base.html" %}
+<hr>
+{% block body %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-body">
+
+
+            <p> Are Your want to delete "{{order}}"</p>
+            <form method="post" >
+                {% csrf_token %}
+                <a href = "{% url 'home' %}" class="btn btn-info" >Back</a>
+                <input class="btn btn-danger" type="submit" name="Delete">
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>
